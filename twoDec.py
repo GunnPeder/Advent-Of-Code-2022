@@ -1,10 +1,11 @@
 
 def get_tuples():
+
     liste = []
     for line in open("2desemberTekst.txt").readlines():
         line = line.strip().split(" ")
         liste.append((line[0],line[1]))
-    
+
     return liste
 
 def score_outcomes():
@@ -12,7 +13,6 @@ def score_outcomes():
     wins = [('C', 'X'),('A', 'Y'),('B', 'Z')]
     draws = [('A', 'X'),('B', 'Y'),('C', 'Z')]
     return wins, draws
-
 
 wins, draws = score_outcomes()
 own_points = {'X': 1, 'Y': 2, 'Z':3}
@@ -23,13 +23,10 @@ for opponent, myself in get_tuples():
         score += 6
     elif (opponent, myself) in draws:
         score += 3
-    else:
-        score += 0
-    
-
+  
     score += own_points.get(myself)
 
-print(f"The total score is: {score}")
+print(f"The total score using own algorithm: {score}")
 
 data = [line.strip().replace(' ', '') for line in open('2desemberTekst.txt', 'r')]
 

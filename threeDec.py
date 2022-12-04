@@ -24,7 +24,7 @@ for string in get_codes():
             total_sum += dictionary[letter]
             break
 
-print(f"Den totale summen for prioriteringen er: {total_sum}")
+print(f"The total priority sum is: {total_sum}")
             
 
 
