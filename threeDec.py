@@ -28,6 +28,13 @@ print(f"The total priority sum is: {total_sum}")
             
 codes = get_codes()
 
-three_per_chunks = [codes[1:i+3] for i in range(0, len(codes), 3)]
+three_per_chunks = [codes[i:i+3] for i in range(0, len(codes), 3)]
 
-print(three_per_chunks)
+total_priority_chunks = 0
+for code1, code2, code3 in three_per_chunks:
+    for letter in code1:
+        if letter in code2 and letter in code3:
+            total_priority_chunks += dictionary[letter]
+            break
+
+print(f"The total priority sum for all chunks is: {total_priority_chunks}")
