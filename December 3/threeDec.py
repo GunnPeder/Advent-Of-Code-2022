@@ -10,7 +10,7 @@ for (prio, letter) in [x for x in get_prios()]:
 
 
 def get_codes():
-    tekst = open("3desemberTekst.txt").readlines()
+    tekst = open("3decemberText.txt").readlines()
     tekst = [lines.strip() for lines in tekst]
     return tekst
 
@@ -26,5 +26,8 @@ for string in get_codes():
 
 print(f"The total priority sum is: {total_sum}")
             
+codes = get_codes()
 
+three_per_chunks = [codes[1:i+3] for i in range(0, len(codes), 3)]
 
+print(three_per_chunks)

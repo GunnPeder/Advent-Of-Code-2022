@@ -3,7 +3,7 @@ def get_totals():
     totals = []
     temp = 0
 
-    for number in open("1desemberTekst.txt").readlines():
+    for number in open("1decemberText.txt").readlines():
 
         if len(number.strip()) > 0:
             temp += int(number)

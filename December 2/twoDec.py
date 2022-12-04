@@ -2,7 +2,7 @@
 def get_tuples():
 
     liste = []
-    for line in open("2desemberTekst.txt").readlines():
+    for line in open("2decemberText.txt").readlines():
         line = line.strip().split(" ")
         liste.append((line[0],line[1]))
 
